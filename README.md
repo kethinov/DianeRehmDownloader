@@ -16,6 +16,10 @@ Download
 Run from source
 ===
 
+First run `npm i -g electron-prebuilt` (may require sudo on *nix platforms).
+
+Then:
+
 ```
 git clone https://github.com/kethinov/DianeRehmDownloader.git
 cd DianeRehmDownloader
@@ -26,6 +30,10 @@ Build
 ===
 
 Build using [electron-packager](https://github.com/maxogden/electron-packager).
+
+First run `npm i -g electron-package` (may require sudo on *nix platforms).
+
+Then:
 
 ```
 git clone https://github.com/kethinov/DianeRehmDownloader.git

@@ -7,11 +7,10 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-- [Windows 32 bit]()
-- [Windows 64 bit]()
+- ~~Windows 32 bit~~
+- ~~Windows 64 bit~~
 - [Linux 32 bit]()
 - [Linux 64 bit]()
-- [Mac 32 bit]()
 - [Mac 64 bit]()
 
 Run from source
@@ -55,12 +54,6 @@ Linux 64 bit:
 
 ```
 electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=x64 --version=0.33.3 --app-version=1.0
-```
-
-Mac 32 bit:
-
-```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=ia32 --version=0.33.3 --app-version=1.0
 ```
 
 Mac 64 bit:

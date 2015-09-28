@@ -1,5 +1,4 @@
-Diane Rehm Downloader
-===
+<img src='https://raw.githubusercontent.com/kethinov/DianeRehmDownloader/master/images/dianerehmdownloaderlogo.png' alt='Diane Rehm Downloader' width='128' height='128'>
 
 [The Diane Rehm Show](http://thedianerehmshow.org/)'s website doesn't let you download episodes (easily) and their podcast frequently goes stale.
 
@@ -8,12 +7,12 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-[Windows 32 bit]()
-[Windows 64 bit]()
-[Linux 32 bit]()
-[Linux 64 bit]()
-[Mac 32 bit]()
-[Mac 64 bit]()
+- [Windows 32 bit]()
+- [Windows 64 bit]()
+- [Linux 32 bit]()
+- [Linux 64 bit]()
+- [Mac 32 bit]()
+- [Mac 64 bit]()
 
 Run from source
 ===

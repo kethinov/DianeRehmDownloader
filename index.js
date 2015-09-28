@@ -37,7 +37,7 @@ feedparser.on('readable', function() {
 
   while (item = stream.read()) {
     hour = ''+item.date.getHours();
-    hour = hour.length > 1 ? hour : '0' + hour;
+    hour = parseInt(hour.length > 1 ? hour : '0' + hour);
     day = ''+item.date.getUTCDate();
     day = day.length > 1 ? day : '0' + day;
     month = ''+(item.date.getMonth() + 1);
@@ -48,7 +48,7 @@ feedparser.on('readable', function() {
     clone = content
       .replace(/{title}/g, item.title)
       .replace('{desc}', item.description)
-      .replace('{filename}', year+month+day+(hour === 10 ? 1 : 2)+' - '+item.title+'.mp3')
+      .replace('{filename}', (year+month+day+(hour === 10 ? 1 : 2)+'_'+item.title).replace(/[^a-z0-9]/gi, '_') + '.mp3')
       .replace('{download}', 'http://downloads.wamu.org/mp3/dr/'+year+'/'+month+'/r'+(hour === 10 ? 1 : 2)+year+month+day+'.mp3');
 
     document.body.insertAdjacentHTML('beforeEnd', clone);
@@ -125,7 +125,7 @@ window.addEventListener('click', function(e) {
                       done.appendChild(document.createTextNode('Listen'));
                       percentElement.parentNode.replaceChild(done, percentElement);
                     }
-                  }, 1000);
+                  }, 100);
 
                   contentLength = res.headers['content-length'];
                   percentComplete = Math.round((chunksSoFar / contentLength) * 100);

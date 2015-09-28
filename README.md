@@ -9,14 +9,16 @@ Download
 
 - ~~Windows 32 bit~~ (coming soon)
 - ~~Windows 64 bit~~ (coming soon)
-- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.0/Diane.Rehm.Downloader-linux-ia32.zip)
-- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.0/Diane.Rehm.Downloader-linux-x64.zip)
-- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.0/Diane.Rehm.Downloader-darwin-x64.zip)
+- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.1/Diane.Rehm.Downloader-linux-ia32.zip)
+- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.1/Diane.Rehm.Downloader-linux-x64.zip)
+- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.1/Diane.Rehm.Downloader-darwin-x64.zip)
 
 Run from source
 ===
 
-First run `npm i -g electron-prebuilt` (may require sudo on *nix platforms).
+First install [Node.js](https://nodejs.org) and [git](https://git-scm.com).
+
+Then from the command line, run `npm i -g electron-prebuilt` (may require sudo on *nix platforms).
 
 Then:
 
@@ -32,7 +34,9 @@ Build
 
 Build using [electron-packager](https://github.com/maxogden/electron-packager).
 
-First run `npm i -g electron-package` (may require sudo on *nix platforms).
+First install [Node.js](https://nodejs.org) and [git](https://git-scm.com).
+
+Then from the command line, run `npm i -g electron-package` (may require sudo on *nix platforms).
 
 Then:
 
@@ -45,35 +49,35 @@ npm i
 Windows 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=0.33.3 --app-version=1.0
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=0.33.3 --app-version=1.0.1
 ```
 
 Windows 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=0.33.3 --app-version=1.0
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=0.33.3 --app-version=1.0.1
 ```
 
 Linux 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=ia32 --version=0.33.3 --app-version=1.0
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=ia32 --version=0.33.3 --app-version=1.0.1
 ```
 
 Linux 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=x64 --version=0.33.3 --app-version=1.0
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=x64 --version=0.33.3 --app-version=1.0.1
 ```
 
 Mac 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=0.33.3 --app-version=1.0
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=0.33.3 --app-version=1.0.1
 ```
 
 All:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=all --arch=all --version=0.33.3 --app-version=1.0
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=all --arch=all --version=0.33.3 --app-version=1.0.1
 ```

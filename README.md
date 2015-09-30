@@ -36,7 +36,7 @@ Build using [electron-packager](https://github.com/maxogden/electron-packager).
 
 First install [Node.js](https://nodejs.org) and [git](https://git-scm.com).
 
-Then from the command line, run `npm i -g electron-package` (may require sudo on *nix platforms).
+Then from the command line, run `npm i -g electron-packager` (may require sudo on *nix platforms).
 
 Then:
 

@@ -49,35 +49,35 @@ npm i
 Windows 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=0.33.3 --app-version=1.0.1
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=0.34.2 --app-version=1.0.1
 ```
 
 Windows 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=0.33.3 --app-version=1.0.1
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=0.34.2 --app-version=1.0.1
 ```
 
 Linux 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=ia32 --version=0.33.3 --app-version=1.0.1
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=ia32 --version=0.34.2 --app-version=1.0.1
 ```
 
 Linux 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=x64 --version=0.33.3 --app-version=1.0.1
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.ico --out=build --overwrite=true --platform=linux --arch=x64 --version=0.34.2 --app-version=1.0.1
 ```
 
 Mac 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=0.33.3 --app-version=1.0.1
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=0.34.2 --app-version=1.0.1
 ```
 
 All:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=all --arch=all --version=0.33.3 --app-version=1.0.1
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=all --arch=all --version=0.34.2 --app-version=1.0.1
 ```

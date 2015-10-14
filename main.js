@@ -13,6 +13,7 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   mainWindow = new electronWindow({width: 600, height: 900, icon: __dirname + '/images/appicon.png'});
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  // mainWindow.openDevTools(); // uncomment to enter dev mode
 
   mainWindow.on('closed', function() {
     mainWindow = null;

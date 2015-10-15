@@ -3,7 +3,8 @@ var FeedParser = require('feedparser'),
     request = require('request'),
     feedparser = new FeedParser(),
     ipc = require('ipc'),
-    fs = require('fs');
+    fs = require('fs'),
+    clones = [];
 
 request.get('http://feeds.wamu.org/WAMU885DianeRehm')
 .on('error', function (error) {
@@ -29,7 +30,6 @@ feedparser.on('readable', function() {
       item,
       template = document.getElementsByTagName('template')[0],
       content = template.innerHTML,
-      clone,
       hour,
       day,
       month,
@@ -44,18 +44,50 @@ feedparser.on('readable', function() {
     month = month.length > 1 ? month : '0' + month;
     year = ''+item.date.getFullYear();
     year = year.substring(2);
-
-    clone = content
-      .replace(/{title}/g, item.title)
-      .replace('{desc}', item.description)
-      .replace('{filename}', (year+month+day+(hour === 10 ? 1 : 2)+'_'+item.title).replace(/[^a-z0-9]/gi, '_') + '.mp3')
-      .replace('{download}', 'http://downloads.wamu.org/mp3/dr/'+year+'/'+month+'/r'+(hour === 10 ? 1 : 2)+year+month+day+'.mp3');
-
-    document.body.insertAdjacentHTML('beforeEnd', clone);
-    document.getElementById('loading').setAttribute('hidden', 'hidden');
+    clones.push({
+      content: content
+        .replace(/{title}/g, item.title)
+        .replace('{desc}', item.description)
+        .replace('{filename}', (year+month+day+(hour === 10 ? 1 : 2)+'_'+item.title).replace(/[^a-z0-9]/gi, '_') + '.mp3')
+        .replace('{download}', 'http://downloads.wamu.org/mp3/dr/'+year+'/'+month+'/r'+(hour === 10 ? 1 : 2)+year+month+day+'.mp3'),
+      hour: hour
+    }); 
   }
 });
 
+feedparser.on('end', function() {
+  var hour = 0,
+      lastHour = 0,
+      segments = 1,
+      totalHTML = '',
+      cloneStrings = [];
+  
+  clones.forEach(function(cloneObj) {
+    var clone = cloneObj.content,
+        hour = cloneObj.hour;
+
+    console.log(hour);
+    if (lastHour === hour) {
+      clone = clone.replace(/\.mp3/g, '-'+segments+'.mp3');
+      console.log(clone);
+      if (segments === 1) {
+        segments++;
+        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace(/\.mp3/g, '-'+segments+'.mp3');
+        console.log(cloneStrings[cloneStrings.length - 1]);
+      }
+    }
+    else {
+      segments = 1;
+    }
+
+    lastHour = hour;
+    cloneStrings.push(clone);
+  });
+
+  document.body.insertAdjacentHTML('beforeEnd', cloneStrings.join(''));
+  document.getElementById('loading').setAttribute('hidden', 'hidden');
+});
+  
 window.addEventListener('click', function(e) {
   var el = e.target,
       req,

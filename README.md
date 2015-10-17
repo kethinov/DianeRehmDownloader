@@ -7,11 +7,11 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-- [Windows 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.2/Diane.Rehm.Downloader-win32-ia32.zip)
-- [Windows 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.2/Diane.Rehm.Downloader-win32-x64.zip)
-- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.2/Diane.Rehm.Downloader-linux-ia32.zip)
-- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.2/Diane.Rehm.Downloader-linux-x64.zip)
-- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.2/Diane.Rehm.Downloader-darwin-x64.zip)
+- [Windows 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.3/Diane.Rehm.Downloader-win32-ia32.zip)
+- [Windows 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.3/Diane.Rehm.Downloader-win32-x64.zip)
+- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.3/Diane.Rehm.Downloader-linux-ia32.zip)
+- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.3/Diane.Rehm.Downloader-linux-x64.zip)
+- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.3/Diane.Rehm.Downloader-darwin-x64.zip)
 
 Run from source
 ===
@@ -49,29 +49,29 @@ npm i
 Windows 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=0.34.2 --app-version=1.0.2
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=0.36.4 --app-version=1.0.3
 ```
 
 Windows 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=0.34.2 --app-version=1.0.2
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=0.36.4 --app-version=1.0.3
 ```
 
 Linux 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=ia32 --version=0.34.2 --app-version=1.0.2
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=ia32 --version=0.36.4 --app-version=1.0.3
 ```
 
 Linux 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=x64 --version=0.34.2 --app-version=1.0.2
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=x64 --version=0.36.4 --app-version=1.0.3
 ```
 
 Mac 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=0.34.2 --app-version=1.0.2
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=0.36.4 --app-version=1.0.3
 ```

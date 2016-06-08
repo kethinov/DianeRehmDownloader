@@ -7,7 +7,7 @@ const electron = require('electron'),
 app.on('ready', function() {
   let win = new BrowserWindow({width: 600, height: 900, icon: __dirname + '/images/appicon.png'});
   win.loadURL('file://' + __dirname + '/index.html');
-  win.openDevTools(); // uncomment to enter dev mode
+  // win.openDevTools(); // uncomment to enter dev mode
 
   win.on('closed', function() {
     win = null;

@@ -5,6 +5,8 @@
   "dependencies": {
     "feedparser": "^1.1.3",
     "request": "^2.64.0",
-    "topcoat": "*"
+    "topcoat": "*",
+    "electron-prebuilt": "1.2.1",
+    "electron-packager": "7.0.3"
   }
 }

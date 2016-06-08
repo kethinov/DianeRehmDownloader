@@ -1,34 +1,29 @@
-var ipc = require('ipc'),
-    app = require('app'),
-    electronWindow = require('browser-window'),
-    dialog = require('dialog'),
-    mainWindow = null;
+const electron = require('electron'),
+      {ipcMain} = electron,
+      {app} = electron,
+      {BrowserWindow} = electron,
+      {dialog} = electron;
+
+app.on('ready', function() {
+  let win = new BrowserWindow({width: 600, height: 900, icon: __dirname + '/images/appicon.png'});
+  win.loadURL('file://' + __dirname + '/index.html');
+  win.openDevTools(); // uncomment to enter dev mode
+
+  win.on('closed', function() {
+    win = null;
+  });
+  
+  ipcMain.on('openListenWindow', function(event, data) {
+    let listenWindow = new BrowserWindow({width: 320, height: 100, title: 'The Diane Rehm Show - ' + data.epTitle});
+    listenWindow.loadURL(data.href);
+    listenWindow.on('closed', function() {
+      listenWindow = null;
+    });
+  });
+});
 
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
     app.quit();
   }
-});
-
-app.on('ready', function() {
-  mainWindow = new electronWindow({width: 600, height: 900, icon: __dirname + '/images/appicon.png'});
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
-  // mainWindow.openDevTools(); // uncomment to enter dev mode
-
-  mainWindow.on('closed', function() {
-    mainWindow = null;
-  });
-  
-  ipc.on('saveEpisode', function(event, data) {
-    var response = dialog.showOpenDialog({properties: ['openDirectory'], title: 'Select folder to save episode to...'});
-    event.returnValue = response || 'abort';
-  });
-
-  ipc.on('openListenWindow', function(event, data) {
-    var listenWindow = new electronWindow({width: 320, height: 100, title: 'The Diane Rehm Show - ' + data.epTitle});
-    listenWindow.loadUrl(data.href);
-    listenWindow.on('closed', function() {
-      listenWindow = null;
-    });
-  });
 });

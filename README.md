@@ -26,7 +26,7 @@ Then:
 git clone https://github.com/kethinov/DianeRehmDownloader.git
 cd DianeRehmDownloader
 npm i
-election .
+electron .
 ```
 
 Build

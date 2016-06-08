@@ -2,9 +2,11 @@ var FeedParser = require('feedparser'),
     http = require('http'),
     request = require('request'),
     feedparser = new FeedParser(),
-    ipc = require('ipc'),
+    ipcRenderer = require('electron').ipcRenderer,
     fs = require('fs'),
     clones = [];
+
+const {dialog} = require('electron').remote;
 
 request.get('http://feeds.wamu.org/WAMU885DianeRehm')
 .on('error', function (error) {
@@ -111,7 +113,7 @@ window.addEventListener('click', function(e) {
     if (el.target === '_blank') {
       
       // listen to it
-      ipc.sendSync('openListenWindow', {
+      ipcRenderer.send('openListenWindow', {
         epTitle: epTitle,
         href: el.href
       });
@@ -131,9 +133,7 @@ window.addEventListener('click', function(e) {
             alert('Not posted yet.');
           }
           else {
-            destination = ipc.sendSync('saveEpisode', {
-              fileName: fileName
-            });
+            destination = dialog.showOpenDialog({properties: ['openDirectory'], title: 'Select folder to save episode to...'});
 
             if (destination !== 'abort') {
               request.get(el.href)

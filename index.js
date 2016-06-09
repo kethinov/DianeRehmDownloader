@@ -133,12 +133,12 @@ window.addEventListener('click', function(e) {
             alert('Not posted yet.');
           }
           else {
-            destination = dialog.showOpenDialog({
+            chosenDirectory = dialog.showOpenDialog({
               properties: ['openDirectory'], 
               title: 'Select folder to save episode to...'
             });
 
-            if (destination !== 'abort') {
+            if (chosenDirectory !== undefined) {
               request.get(el.href)
               .on('error', function(err) {
                 alert('Not posted yet.');

@@ -154,6 +154,7 @@ window.addEventListener('click', function(e) {
                     if (percentComplete >= 100) {
                       clearInterval(interval);
                       done = document.createElement('a');
+                      done.className = 'topcoat-button';
                       done.href = destination + '/' + fileName;
                       done.target = '_blank';
                       done.setAttribute('data-title', epTitle);

@@ -99,6 +99,7 @@ window.addEventListener('click', function(e) {
       contentLength = 0,
       chunksSoFar = 0,
       percentComplete = 0,
+      spinner,
       listenWindow;
 
   if (el.nodeName === 'A') {
@@ -119,8 +120,13 @@ window.addEventListener('click', function(e) {
       });
     }
     else {
-
+      
       // download it
+      spinner = document.createElement('div');
+      spinner.className = 'spinner';
+      el.style.visibility = 'hidden';
+      el.parentNode.insertBefore(spinner, el.parentNode.firstChild);
+      
       req = http.request(
         {
           method: 'HEAD',
@@ -128,9 +134,12 @@ window.addEventListener('click', function(e) {
           port: 80,
           path: el.href.replace('http://downloads.wamu.org', '')
         },
+        
         function(res) {
           if (res.statusCode === 404) {
             alert('Not posted yet.');
+            el.style.visibility = 'visible'; 
+            el.parentNode.removeChild(spinner);
           }
           else {
             destination = dialog.showOpenDialog({
@@ -138,7 +147,7 @@ window.addEventListener('click', function(e) {
               title: 'Select folder to save episode to...'
             });
 
-            if (destination !== 'abort') {
+            if (destination !== undefined) {
               request.get(el.href)
               .on('error', function(err) {
                 alert('Not posted yet.');
@@ -167,7 +176,7 @@ window.addEventListener('click', function(e) {
                   percentComplete = Math.round((chunksSoFar / contentLength) * 100);
                   percentElement.setAttribute('value', percentComplete);
                   percentElement.setAttribute('max', '100');
-                  el.parentNode.replaceChild(percentElement, el);
+                  el.parentNode.replaceChild(percentElement, spinner);
                 }
                 else {
                   return this.emit('error', new Error('Bad status code'));
@@ -178,6 +187,11 @@ window.addEventListener('click', function(e) {
                 percentComplete = Math.round((chunksSoFar / contentLength) * 100);
               })
               .pipe(fs.createWriteStream(destination + '/' + fileName));
+            }
+            
+            else {
+              el.style.visibility = 'visible'; 
+              el.parentNode.removeChild(spinner);
             }
           }
         }

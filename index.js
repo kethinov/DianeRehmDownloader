@@ -138,6 +138,8 @@ window.addEventListener('click', function(e) {
         function(res) {
           if (res.statusCode === 404) {
             alert('Not posted yet.');
+            el.style.visibility = 'visible'; 
+            el.parentNode.removeChild(spinner);
           }
           else {
             chosenDirectory = dialog.showOpenDialog({

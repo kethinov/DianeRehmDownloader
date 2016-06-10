@@ -95,7 +95,7 @@ window.addEventListener('click', function(e) {
       req,
       epTitle,
       fileName,
-      chosenDirectory,
+      destination,
       contentLength = 0,
       chunksSoFar = 0,
       percentComplete = 0,
@@ -142,12 +142,12 @@ window.addEventListener('click', function(e) {
             el.parentNode.removeChild(spinner);
           }
           else {
-            chosenDirectory = dialog.showOpenDialog({
+            destination = dialog.showOpenDialog({
               properties: ['openDirectory'], 
               title: 'Select folder to save episode to...'
             });
 
-            if (chosenDirectory !== undefined) {
+            if (destination !== undefined) {
               request.get(el.href)
               .on('error', function(err) {
                 alert('Not posted yet.');

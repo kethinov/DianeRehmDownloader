@@ -12,7 +12,7 @@ app.on('ready', function() {
   });
   win.loadURL('file://' + __dirname + '/index.html');
   // win.openDevTools(); // uncomment to enter dev mode
-    
+  
   win.on('closed', function() {
     win = null;
   });

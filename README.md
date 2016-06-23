@@ -45,29 +45,29 @@ npm i
 Windows 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=1.2.1 --app-version=1.0.4
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=1.2.5 --app-version=1.0.5 --asar
 ```
 
 Windows 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=1.2.1 --app-version=1.0.4
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=1.2.5 --app-version=1.0.5 --asar
 ```
 
 Linux 32 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=ia32 --version=1.2.1 --app-version=1.0.4
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=ia32 --version=1.2.5 --app-version=1.0.5 --asar
 ```
 
 Linux 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=x64 --version=1.2.1 --app-version=1.0.4
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=x64 --version=1.2.5 --app-version=1.0.5 --asar
 ```
 
 Mac 64 bit:
 
 ```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=1.2.1 --app-version=1.0.4
+electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=1.2.5 --app-version=1.0.5 --asar
 ```

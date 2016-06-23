@@ -1,14 +1,13 @@
 const electron = require('electron'),
       {app} = electron,
       {BrowserWindow} = electron,
-      {ipcMain} = electron,
-      path = require('path');
+      {ipcMain} = electron;
 
 app.on('ready', function() {
   let win = new BrowserWindow({
     width: 600,
     height: 900,
-    icon: process.platform === 'linux' && path.join(__dirname, 'images', 'icon.png')
+    icon: process.platform === 'linux' && __dirname + '/images/icon.png'
   });
   win.loadURL('file://' + __dirname + '/index.html');
   // win.openDevTools(); // uncomment to enter dev mode

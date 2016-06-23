@@ -1,20 +1,27 @@
 const electron = require('electron'),
-      {ipcMain} = electron,
       {app} = electron,
       {BrowserWindow} = electron,
-      {dialog} = electron;
+      {ipcMain} = electron;
 
 app.on('ready', function() {
-  let win = new BrowserWindow({width: 600, height: 900, icon: __dirname + '/images/appicon.png'});
+  let win = new BrowserWindow({
+    width: 600,
+    height: 900,
+    icon: process.platform === 'linux' && __dirname + '/images/icon.png'
+  });
   win.loadURL('file://' + __dirname + '/index.html');
   // win.openDevTools(); // uncomment to enter dev mode
-
+  
   win.on('closed', function() {
     win = null;
   });
   
   ipcMain.on('openListenWindow', function(event, data) {
-    let listenWindow = new BrowserWindow({width: 320, height: 100, title: 'The Diane Rehm Show - ' + data.epTitle});
+    let listenWindow = new BrowserWindow({
+      width: 320,
+      height: 100,
+      title: 'The Diane Rehm Show - ' + data.epTitle
+    });
     listenWindow.loadURL(data.href);
     listenWindow.on('closed', function() {
       listenWindow = null;

@@ -7,11 +7,11 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-- [Windows 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-win32-ia32.zip)
-- [Windows 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-win32-x64.zip)
-- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-linux-ia32.zip)
-- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-linux-x64.zip)
-- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-darwin-x64.zip)
+- [Windows 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.5/Diane.Rehm.Downloader-win32-x64.zip)
+- [Windows 32-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.5/Diane.Rehm.Downloader-win32-ia32.zip)
+- [Linux 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.5/Diane.Rehm.Downloader-linux-x64.zip)
+- [Linux 32-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.5/Diane.Rehm.Downloader-linux-ia32.zip)
+- [Mac 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.5/Diane.Rehm.Downloader-darwin-x64.zip)
 
 Run from source
 ===
@@ -34,7 +34,7 @@ Builds are constructed with [electron-packager](https://github.com/maxogden/elec
 
 Be sure to have [Node.js](https://nodejs.org) and [git](https://git-scm.com) installed.
 
-First, be sure to run:
+Set up the repo:
 
 ```
 git clone https://github.com/kethinov/DianeRehmDownloader.git
@@ -42,18 +42,12 @@ cd DianeRehmDownloader
 npm i
 ```
 
-Then:
+Do builds for:
 
-All Platforms: `npm run build`
-
-64-Bit Platforms Only: `npm run build-64`
-
-macOS: `npm run build-mac`
-
-Windows 64-Bit: `npm run build-win`
-
-Windows 32-Bit: `npm run build-win32`
-
-Linux 64-Bit: `npm run build-linux`
-
-Linux 32-Bit: `npm run build-linux32`
+- All platforms: `npm run build`
+- All 64-bit platforms: `npm run build-64`
+- Windows 64-bit: `npm run build-win`
+- Windows 32-bit: `npm run build-win32`
+- Linux 64-bit: `npm run build-linux`
+- Linux 32-bit: `npm run build-linux32`
+- macOS: `npm run build-mac`

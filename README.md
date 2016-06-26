@@ -30,11 +30,11 @@ electron .
 Build
 ===
 
-Build using [electron-packager](https://github.com/maxogden/electron-packager).
+Builds are constructed with [electron-packager](https://github.com/maxogden/electron-packager).
 
-First install [Node.js](https://nodejs.org) and [git](https://git-scm.com).
+Be sure to have [Node.js](https://nodejs.org) and [git](https://git-scm.com) installed.
 
-Then:
+First, be sure to run:
 
 ```
 git clone https://github.com/kethinov/DianeRehmDownloader.git
@@ -42,32 +42,18 @@ cd DianeRehmDownloader
 npm i
 ```
 
-Windows 32 bit:
+Then:
 
-```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=ia32 --version=1.2.5 --app-version=1.0.5 --asar
-```
+All Platforms: `npm run build`
 
-Windows 64 bit:
+64-Bit Platforms Only: `npm run build-64`
 
-```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --version-string.FileDescription="Diane Rehm Downloader" --icon=images/appicon.ico --out=build --overwrite=true --platform=win32 --arch=x64 --version=1.2.5 --app-version=1.0.5 --asar
-```
+macOS: `npm run build-mac`
 
-Linux 32 bit:
+Windows 64-Bit: `npm run build-win`
 
-```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=ia32 --version=1.2.5 --app-version=1.0.5 --asar
-```
+Windows 32-Bit: `npm run build-win32`
 
-Linux 64 bit:
+Linux 64-Bit: `npm run build-linux`
 
-```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --out=build --overwrite=true --platform=linux --arch=x64 --version=1.2.5 --app-version=1.0.5 --asar
-```
-
-Mac 64 bit:
-
-```
-electron-packager ./ "Diane Rehm Downloader" --app-bundle-id=dianerehmdownloader --icon=images/appicon.icns --out=build --overwrite=true --platform=darwin --arch=x64 --version=1.2.5 --app-version=1.0.5 --asar
-```
+Linux 32-Bit: `npm run build-linux32`

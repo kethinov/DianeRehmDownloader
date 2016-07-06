@@ -7,7 +7,7 @@ app.on('ready', function() {
   let win = new BrowserWindow({
     width: 600,
     height: 900,
-    icon: process.platform === 'linux' && __dirname + '/images/icon.png'
+    icon: process.platform === 'linux' && __dirname + '/images/appicon.png'
   });
   win.loadURL('file://' + __dirname + '/index.html');
   // win.openDevTools(); // uncomment to enter dev mode

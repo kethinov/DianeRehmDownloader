@@ -144,7 +144,8 @@ window.addEventListener('click', function(e) {
           else {
             destination = dialog.showOpenDialog({
               properties: ['openDirectory'],
-              title: 'Select folder to save episode to...'
+              title: 'Select folder to save episode to...',
+              defaultPath: process.env.HOME
             });
 
             if (destination !== undefined) {

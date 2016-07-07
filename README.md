@@ -7,11 +7,11 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-- [Windows 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-win32-ia32.zip)
-- [Windows 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-win32-x64.zip)
-- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-linux-ia32.zip)
-- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-linux-x64.zip)
-- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.4/Diane.Rehm.Downloader-darwin-x64.zip)
+- [Windows 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.6/Diane.Rehm.Downloader-win32-ia32.zip)
+- [Windows 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.6/Diane.Rehm.Downloader-win32-x64.zip)
+- [Linux 32 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.6/Diane.Rehm.Downloader-linux-ia32.zip)
+- [Linux 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.6/Diane.Rehm.Downloader-linux-x64.zip)
+- [Mac 64 bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.6/Diane.Rehm.Downloader-darwin-x64.zip)
 
 Run from source
 ===

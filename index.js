@@ -8,7 +8,7 @@ var FeedParser = require('feedparser'),
 
 const {dialog} = require('electron').remote;
 
-request.get('http://feeds.wamu.org/WAMU885DianeRehm')
+request.get('http://tcoutu.com/Rehm.xml')
 .on('error', function (error) {
   alert('Error getting Diane Rehm feed.');
 })
@@ -68,14 +68,11 @@ feedparser.on('end', function() {
     var clone = cloneObj.content,
         hour = cloneObj.hour;
 
-    console.log(hour);
     if (lastHour === hour) {
-      clone = clone.replace(/\.mp3/g, '-'+segments+'.mp3');
-      console.log(clone);
+      clone = clone.replace('_', '-'+segments+'_');
       if (segments === 1) {
         segments++;
-        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace(/\.mp3/g, '-'+segments+'.mp3');
-        console.log(cloneStrings[cloneStrings.length - 1]);
+        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace('_', '-'+segments+'_');
       }
     }
     else {

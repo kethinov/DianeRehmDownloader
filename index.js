@@ -8,7 +8,7 @@ var FeedParser = require('feedparser'),
 
 const {dialog} = require('electron').remote;
 
-request.get('http://tcoutu.com/Rehm.xml')
+request.get('http://feeds.wamu.org/WAMU885DianeRehm')
 .on('error', function (error) {
   alert('Error getting Diane Rehm feed.');
 })

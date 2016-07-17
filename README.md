@@ -7,11 +7,11 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-- [Windows 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.7/Diane.Rehm.Downloader-win32-x64.zip)
-- [Windows 32-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.7/Diane.Rehm.Downloader-win32-ia32.zip)
-- [Linux 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.7/Diane.Rehm.Downloader-linux-x64.zip)
-- [Linux 32-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.7/Diane.Rehm.Downloader-linux-ia32.zip)
-- [Mac 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.7/Diane.Rehm.Downloader-darwin-x64.zip)
+- [Windows 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.8/Diane.Rehm.Downloader-win32-x64.zip)
+- [Windows 32-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.8/Diane.Rehm.Downloader-win32-ia32.zip)
+- [Linux 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.8/Diane.Rehm.Downloader-linux-x64.zip)
+- [Linux 32-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.8/Diane.Rehm.Downloader-linux-ia32.zip)
+- [macOS 64-bit](https://github.com/kethinov/DianeRehmDownloader/releases/download/1.0.8/Diane.Rehm.Downloader-darwin-x64.zip)
 
 Run from source
 ===
@@ -32,7 +32,7 @@ Build
 
 Builds are constructed with [electron-packager](https://github.com/maxogden/electron-packager).
 
-Be sure to have [Node.js](https://nodejs.org) and [git](https://git-scm.com) installed.
+Be sure to have [Node.js](https://nodejs.org) and [git](https://git-scm.com) installed. The build commands presume bash and zip are installed as well, so a Linux or Mac build environment is recommended, although it's probably possible to get a sane build environment set up in Windows too.
 
 Set up the repo:
 

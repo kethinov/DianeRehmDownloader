@@ -70,9 +70,11 @@ feedparser.on('end', function() {
 
     if (lastHour === hour) {
       clone = clone.replace('_', '-'+segments+'_');
+      clone = clone.replace(/\.mp3/, '-'+segments+'.mp3');
       if (segments === 1) {
         segments++;
         cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace('_', '-'+segments+'_');
+        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace(/\.mp3/, '-'+segments+'.mp3');
       }
     }
     else {

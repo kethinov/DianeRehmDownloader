@@ -68,14 +68,13 @@ feedparser.on('end', function() {
     var clone = cloneObj.content,
         hour = cloneObj.hour;
 
-    console.log(hour);
     if (lastHour === hour) {
-      clone = clone.replace(/\.mp3/g, '-'+segments+'.mp3');
-      console.log(clone);
+      clone = clone.replace('_', '-'+segments+'_');
+      clone = clone.replace(/\.mp3/, '-'+segments+'.mp3');
       if (segments === 1) {
         segments++;
-        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace(/\.mp3/g, '-'+segments+'.mp3');
-        console.log(cloneStrings[cloneStrings.length - 1]);
+        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace('_', '-'+segments+'_');
+        cloneStrings[cloneStrings.length - 1] = cloneStrings[cloneStrings.length - 1].replace(/\.mp3/, '-'+segments+'.mp3');
       }
     }
     else {

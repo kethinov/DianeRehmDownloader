@@ -98,6 +98,7 @@ window.addEventListener('click', function(e) {
       contentLength = 0,
       chunksSoFar = 0,
       percentComplete = 0,
+      dianeChance,
       spinner,
       listenWindow;
 
@@ -121,8 +122,18 @@ window.addEventListener('click', function(e) {
     else {
       
       // download it
-      spinner = document.createElement('div');
-      spinner.className = 'spinner';
+      dianeChance = Math.floor(Math.random() * 43711) + 1
+      
+      if (dianeChance === 1) {
+        spinner = document.createElement('img');
+        spinner.src = __dirname + '/images/diane.png';
+        spinner.className = 'diane';
+      }
+      else {
+        spinner = document.createElement('div');
+        spinner.className = 'spinner';
+      }
+      
       el.style.visibility = 'hidden';
       el.parentNode.insertBefore(spinner, el.parentNode.firstChild);
       

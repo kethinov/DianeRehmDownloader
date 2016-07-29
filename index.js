@@ -122,7 +122,7 @@ window.addEventListener('click', function(e) {
     else {
       
       // download it
-      dianeChance = Math.floor(Math.random() * 1000) + 1
+      dianeChance = Math.floor(Math.random() * 43711) + 1
       
       if (dianeChance === 1) {
         spinner = document.createElement('img');

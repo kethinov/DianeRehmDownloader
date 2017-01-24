@@ -51,9 +51,10 @@ feedparser.on('readable', function() {
         .replace(/{title}/g, item.title)
         .replace('{desc}', item.description)
         .replace('{filename}', (year+month+day+(hour === 10 ? 1 : 2)+'_'+item.title).replace(/[^a-z0-9]/gi, '_') + '.mp3')
-        .replace('{download}', 'http://downloads.wamu.org/mp3/dr/'+year+'/'+month+'/r'+(hour === 10 ? 1 : 2)+year+month+day+'.mp3'),
+        .replace('{download}', 'http://downloads.wamu.org/mp3/dr/'+year+'/'+month+'/r'+((year >= 17 || hour === 10) ? 1 : 2)+year+month+day+'.mp3'),
+      year: year,
       hour: hour
-    }); 
+    });
   }
 });
 
@@ -63,12 +64,13 @@ feedparser.on('end', function() {
       segments = 1,
       totalHTML = '',
       cloneStrings = [];
-  
+
   clones.forEach(function(cloneObj) {
     var clone = cloneObj.content,
-        hour = cloneObj.hour;
+        hour = cloneObj.hour,
+        year = cloneObj.year;
 
-    if (lastHour === hour) {
+    if (year <= 16 && lastHour === hour) {
       clone = clone.replace('_', '-'+segments+'_');
       clone = clone.replace(/\.mp3/, '-'+segments+'.mp3');
       if (segments === 1) {
@@ -88,7 +90,7 @@ feedparser.on('end', function() {
   document.body.insertAdjacentHTML('beforeEnd', cloneStrings.join(''));
   document.getElementById('loading').setAttribute('hidden', 'hidden');
 });
-  
+
 window.addEventListener('click', function(e) {
   var el = e.target,
       req,
@@ -110,9 +112,9 @@ window.addEventListener('click', function(e) {
     e.preventDefault();
     epTitle = el.getAttribute('data-title');
     fileName = el.getAttribute('data-filename');
-    
+
     if (el.target === '_blank') {
-      
+
       // listen to it
       ipcRenderer.send('openListenWindow', {
         epTitle: epTitle,
@@ -120,10 +122,10 @@ window.addEventListener('click', function(e) {
       });
     }
     else {
-      
+
       // download it
       dianeChance = Math.floor(Math.random() * 43711) + 1
-      
+
       if (dianeChance === 1) {
         spinner = document.createElement('img');
         spinner.src = __dirname + '/images/diane.png';
@@ -133,10 +135,10 @@ window.addEventListener('click', function(e) {
         spinner = document.createElement('div');
         spinner.className = 'spinner';
       }
-      
+
       el.style.visibility = 'hidden';
       el.parentNode.insertBefore(spinner, el.parentNode.firstChild);
-      
+
       req = http.request(
         {
           method: 'HEAD',
@@ -144,11 +146,11 @@ window.addEventListener('click', function(e) {
           port: 80,
           path: el.href.replace('http://downloads.wamu.org', '')
         },
-        
+
         function(res) {
           if (res.statusCode === 404) {
             alert('Not posted yet.');
-            el.style.visibility = 'visible'; 
+            el.style.visibility = 'visible';
             el.parentNode.removeChild(spinner);
           }
           else {
@@ -198,9 +200,9 @@ window.addEventListener('click', function(e) {
               })
               .pipe(fs.createWriteStream(destination + '/' + fileName));
             }
-            
+
             else {
-              el.style.visibility = 'visible'; 
+              el.style.visibility = 'visible';
               el.parentNode.removeChild(spinner);
             }
           }

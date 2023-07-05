@@ -1,5 +1,7 @@
 <img src='https://raw.githubusercontent.com/kethinov/DianeRehmDownloader/master/images/dianerehmdownloaderlogo.png' alt='Diane Rehm Downloader' width='128' height='128'>
 
+**NOTE: NO LONGER MAINTAINED.**
+
 While this project is somewhat useless now that Diane Rehm doesn't do a daily show anymore, back when she broadcasted daily, [The Diane Rehm Show](http://thedianerehmshow.org/)'s website did not let you download episodes (easily) and their podcast feed was frequently stale.
 
 This app was designed to let you download the episodes directly to your computer rather than having to listen to them on the website or via the podcast feed.
